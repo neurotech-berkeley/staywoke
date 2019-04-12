@@ -53,6 +53,9 @@ import com.choosemuse.libmuse.ResultLevel;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,6 +84,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
     Python python;
     PyObject hello;
+    List<Double> alphaPacket;
+    List<Double> thetaPacket;
+    int counterAlpha = 0;
+    int counterTheta = 0;
 
     /**
      * Tag used for logging purposes.
@@ -138,6 +145,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private boolean alphaStale;
     private final double[] accelBuffer = new double[3];
     private boolean accelStale;
+    private final double[] thetaBuffer = new double[6];
 
     private boolean artifactStale;
     private final boolean[] artifBuffer = new boolean[2];
@@ -186,6 +194,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
         python = Python.getInstance();
         hello = python.getModule("hello");
+        alphaPacket = new ArrayList<>();
+        thetaPacket = new ArrayList<>();
 
         // We need to set the context on MuseManagerAndroid before we can do anything.
         // This must come before other LibMuse API calls as it also loads the library.
@@ -424,7 +434,6 @@ public class MainActivity extends Activity implements OnClickListener {
             case ALPHA_SCORE:
                 assert(eegBuffer.length >= n);
                 getAlphaScoreValues(p);
-
             case EEG:
                 assert(eegBuffer.length >= n);
                 getEegChannelValues(eegBuffer,p);
@@ -437,9 +446,12 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
             case ALPHA_RELATIVE:
                 assert(alphaBuffer.length >= n);
-                getEegChannelValues(alphaBuffer,p);
+                getAlphaRelative(p);
                 alphaStale = true;
                 break;
+            case THETA_RELATIVE:
+                assert(thetaBuffer.length >= n);
+                getThetaRelative(p);
             case BATTERY:
             case DRL_REF:
             case QUANTIZATION:
@@ -448,6 +460,63 @@ public class MainActivity extends Activity implements OnClickListener {
         }
     }
 
+    private void sendData() {
+        int N = 1000;
+        boolean ready = hello.callAttr("ready").toBoolean();
+        if(ready) {
+            if(counterAlpha < N) {
+                counterAlpha++;
+            }
+            if(counterTheta < N) {
+                counterTheta++;
+            }
+            else if((counterTheta == N) && (counterAlpha == N)){
+                counterTheta = 0;
+                counterAlpha = 0;
+                int alphaLength = alphaPacket.size();
+                int thetaLength = thetaPacket.size();
+                List<Double> alphaValues = alphaPacket.subList(alphaLength - N - 1, alphaLength);
+                List<Double> thetaValues = thetaPacket.subList(thetaLength - N - 1, thetaLength);
+                ArrayList<Double> Output = hello.callAttr("getEEGBuffer", alphaValues, thetaValues).toJava(new ArrayList<Double>());
+                System.out.println(Output);
+            }
+        }
+    }
+
+    private void getThetaRelative(MuseDataPacket p) {
+        double[] thetaVals = new double[4];
+        thetaVals[0] = p.getEegChannelValue(Eeg.EEG1);
+        thetaVals[1] = p.getEegChannelValue(Eeg.EEG2);
+        thetaVals[2] = p.getEegChannelValue(Eeg.EEG3);
+        thetaVals[3] = p.getEegChannelValue(Eeg.EEG4);
+
+        double sum = 0;
+        for (int i = 0; i < 4; i++) {
+            sum += thetaVals[i];
+        }
+        sum = sum / 4;
+        thetaPacket.add(sum);
+        sendData();
+    }
+
+    private void getAlphaRelative(MuseDataPacket p) {
+        double[] alphaVals = new double[4];
+        alphaVals[0] = p.getEegChannelValue(Eeg.EEG1);
+        alphaVals[1] = p.getEegChannelValue(Eeg.EEG2);
+        alphaVals[2] = p.getEegChannelValue(Eeg.EEG3);
+        alphaVals[3] = p.getEegChannelValue(Eeg.EEG4);
+
+        double sum = 0;
+        for (int i = 0; i < 4; i++) {
+            sum += alphaVals[i];
+        }
+        sum = sum / 4;
+        alphaPacket.add(sum);
+        sendData();
+    }
+
+
+
     private void getAlphaScoreValues(MuseDataPacket p) {
         eegBuffer[0] = p.getEegChannelValue(Eeg.EEG1);
         eegBuffer[1] = p.getEegChannelValue(Eeg.EEG2);
@@ -455,6 +524,9 @@ public class MainActivity extends Activity implements OnClickListener {
         eegBuffer[3] = p.getEegChannelValue(Eeg.EEG4);
         eegBuffer[4] = p.getEegChannelValue(Eeg.AUX_LEFT);
         eegBuffer[5] = p.getEegChannelValue(Eeg.AUX_RIGHT);
+
+        MuseDataPacket alpha = MuseDataPacketType.ALPHA_RELATIVE
+
 
         writeDataPacketToFile(p);
         saveFile();
@@ -497,6 +569,9 @@ public class MainActivity extends Activity implements OnClickListener {
         buffer[3] = p.getEegChannelValue(Eeg.EEG4);
         buffer[4] = p.getEegChannelValue(Eeg.AUX_LEFT);
         buffer[5] = p.getEegChannelValue(Eeg.AUX_RIGHT);
+
+        alphaPacket.add(eegBuffer[0]);
+        thetaPacket.add(eegBuffer[1]);
 
         writeDataPacketToFile(p);
         saveFile();

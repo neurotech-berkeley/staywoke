@@ -1,4 +1,0 @@
-#Fri Apr 05 12:11:27 PDT 2019
-base.0=/Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/build/intermediates/transforms/dexMerger/arm/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
