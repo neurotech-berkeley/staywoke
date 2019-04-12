@@ -1,97 +1,34 @@
 import numpy as np
-from scipy import signal
-
-#extract relative band powers (a float between 0 and 1)
-theta_relative = '/muse/elements/theta_relative' #EDIT PATH TO MATCH YOUR OWN
-alpha_relative = '/muse/elements/alpha_relative' #EDIT PATH TO MATCH YOUR OWN
-
-#filter relative band powers using 4th order type II Chebyshev filter
-#isolate slow waves
-
-#for theta
-rs_theta = '??' #minimum attenuation required in the stop band
-Wn_theta = '??' #critical frequency after which the wave is no longer considered a "slow wave"
-b_theta, a_theta = scipy.signal.cheby2(4, rs_theta, Wn_theta)
-
-w_theta, h_theta = scipy.signal.freqz(b_theta, a_theta) #extract frequency response
-
-#for alpha
-rs_alpha = '??' #minimum attenuation required in the stop band
-Wn_alpha = '??' #critical frequency after which the wave is no longer considered a "slow wave"
-b_alpha, a_alpha = scipy.signal.cheby2(4, rs_alpha, Wn_alpha)
-
-w_alpha, h_alpha = scipy.signal.freqz(b_alpha, a_theta) #extract frequency response
-
-
-#STUCK ON HOW TO USE FREQUENCY RESPONSE TO FILTER OUR THETA/ALPHA WAVES INTO SLOW WAVES:
-# 1) how to use the frequency response to filter the data?
-# 2) how the relative band powers play into these calculations?
-
-#sleep-onset detection rules: need to estimate optimal V, lambda parameters
-
-
+import pandas as pd
 import scipy as sp
 from scipy import fftpack
-import numpy as np
+from scipy import signal
 
-# Artifact Removal - used only on preprocessing of raw sleep data
-#sp.signal.butter(..)
 
-# Converts a signal from its original domain to a representation in the frequency domain -
-# used only on preprocessing of raw sleep data
+ARMS_thresh = 1.2
+dA_thresh = 10
+BAI_thresh = 100000
 
-#fftpack.fft(..)
+def ARMS(alpha):
+    alpha1 = alpha/np.mean(alpha)
+    return np.sqrt(np.mean(alpha1**2))
 
-# Power Ratio Calculation
-# Forth order type two Chebyshev filter
-# scipy.signal.cheb2(N=4, ...)
+def BAI(alpha,beta,delta,theta):
+    return np.abs((np.diff(alpha)+np.diff(theta))*np.diff(delta)-np.diff(beta))
 
-# Final Cut (final step)
 
-# Estimating optimal parameters V, lambda
-def sign(x):
-    return {
-    if x > 0: 1,
+def dARMS(alpha):
+    return np.sqrt(np.mean(np.diff(alpha)**2))
 
-    elif x == 0: 0,
-
-    else -1 }[True]
-
-def H(x):
-    return 1 if x > 0 else 0
-
-def grid_search(S_theta, S_alpha, N_1, N_2):
-    err = float('inf')
-    # ...
-    return V, alpha
-
-# Calculating emergy power ratio
-def totalPS(data): #input transformed data (needs to have an x axis of frequency)
-    Fmin = 0.3
-    Fmax = 64
-    return integrate.quad(data, Fmin, Fmax)
-
-def PR(flow, fhigh, data):
-    return (integrate.quad(data, flow, fhigh)) / totalPS(data)
-
-def alpha_theta_PRs(data):
-    PRalpha = PR(8, 12, data)
-    PRtheta = PR(4, 8 data)
-    return PRalpha, PRtheta
-
-h = 1456
-
-eeg1 = []
-eeg2 = []
-eeg3 = []
-eeg4 = []
+def isDrowsy(alpha, beta, delta, theta):
+    ARMS_drowsy = ARMS(alpha) > ARMS_thresh
+    dA_drowsy = dARMS(alpha) > dA_thresh
+    BAI_drowsy = BAI(alpha,beta,delta,theta) > BAI_thresh
+    return (BAI_drowsy & dA_drowsy) | (BAI_drowsy & ARMS_drowsy) | (dA_drowsy & ARMS_drowsy)
 
 #Returns a tuple containing a list of 1000 alpha values and a list of 1000 theta values
-def getEEGBuffer(alpha_values, theta_values):
-    returnList = []
-    returnList.extend(alpha_values)
-    returnList.extend(theta_values)
-    return returnList
+def getEEGBuffer(alpha_values, beta_values, theta_values, delta_values):
+    return isDrowsy(alpha_values, beta_values, delta_values, theta_values)
 
 def ready():
     return True

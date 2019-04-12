@@ -86,8 +86,12 @@ public class MainActivity extends Activity implements OnClickListener {
     PyObject hello;
     List<Double> alphaPacket;
     List<Double> thetaPacket;
+    List<Double> betaPacket;
+    List<Double> deltaPacket;
     int counterAlpha = 0;
     int counterTheta = 0;
+    int counterBeta = 0;
+    int counterDelta = 0;
 
     /**
      * Tag used for logging purposes.
@@ -146,6 +150,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private final double[] accelBuffer = new double[3];
     private boolean accelStale;
     private final double[] thetaBuffer = new double[6];
+    private boolean thetaStale;
 
     private boolean artifactStale;
     private final boolean[] artifBuffer = new boolean[2];
@@ -196,6 +201,8 @@ public class MainActivity extends Activity implements OnClickListener {
         hello = python.getModule("hello");
         alphaPacket = new ArrayList<>();
         thetaPacket = new ArrayList<>();
+        betaPacket = new ArrayList<>();
+        deltaPacket = new ArrayList<>();
 
         // We need to set the context on MuseManagerAndroid before we can do anything.
         // This must come before other LibMuse API calls as it also loads the library.
@@ -279,7 +286,10 @@ public class MainActivity extends Activity implements OnClickListener {
                 muse.unregisterAllListeners();
                 muse.registerConnectionListener(connectionListener);
                 muse.registerDataListener(dataListener, MuseDataPacketType.EEG);
-                muse.registerDataListener(dataListener, MuseDataPacketType.ALPHA_RELATIVE);
+                muse.registerDataListener(dataListener, MuseDataPacketType.ALPHA_ABSOLUTE);
+                muse.registerDataListener(dataListener, MuseDataPacketType.BETA_ABSOLUTE);
+                muse.registerDataListener(dataListener, MuseDataPacketType.THETA_ABSOLUTE);
+                muse.registerDataListener(dataListener, MuseDataPacketType.DELTA_ABSOLUTE);
                 muse.registerDataListener(dataListener, MuseDataPacketType.ACCELEROMETER);
                 muse.registerDataListener(dataListener, MuseDataPacketType.BATTERY);
                 muse.registerDataListener(dataListener, MuseDataPacketType.DRL_REF);
@@ -444,14 +454,19 @@ public class MainActivity extends Activity implements OnClickListener {
                 getAccelValues(p);
                 accelStale = true;
                 break;
-            case ALPHA_RELATIVE:
+            case ALPHA_ABSOLUTE:
                 assert(alphaBuffer.length >= n);
                 getAlphaRelative(p);
                 alphaStale = true;
                 break;
-            case THETA_RELATIVE:
+            case BETA_ABSOLUTE:
+                getBetaRelative(p);
+            case THETA_ABSOLUTE:
                 assert(thetaBuffer.length >= n);
                 getThetaRelative(p);
+                thetaStale = true;
+            case DELTA_ABSOLUTE:
+                getDeltaRelative(p);
             case BATTERY:
             case DRL_REF:
             case QUANTIZATION:
@@ -470,17 +485,61 @@ public class MainActivity extends Activity implements OnClickListener {
             if(counterTheta < N) {
                 counterTheta++;
             }
-            else if((counterTheta == N) && (counterAlpha == N)){
+            if(counterDelta < N) {
+                counterDelta++;
+            }
+            if(counterBeta < N) {
+                counterBeta++;
+            }
+            else if((counterTheta >= N) && (counterAlpha >= N) && (counterDelta >= N) && (counterBeta >= N)){
                 counterTheta = 0;
                 counterAlpha = 0;
+                counterBeta = 0;
+                counterDelta = 0;
                 int alphaLength = alphaPacket.size();
                 int thetaLength = thetaPacket.size();
+                int deltaLength = deltaPacket.size();
+                int betaLength = thetaPacket.size();
                 List<Double> alphaValues = alphaPacket.subList(alphaLength - N - 1, alphaLength);
                 List<Double> thetaValues = thetaPacket.subList(thetaLength - N - 1, thetaLength);
-                ArrayList<Double> Output = hello.callAttr("getEEGBuffer", alphaValues, thetaValues).toJava(new ArrayList<Double>());
+                List<Double> deltaValues = deltaPacket.subList(deltaLength - N - 1, deltaLength);
+                List<Double> betaValues = betaPacket.subList(betaLength - N - 1, betaLength);
+                ArrayList<Double> Output = hello.callAttr("getEEGBuffer", alphaValues, betaValues, thetaValues, deltaValues).toJava(new ArrayList<Double>());
                 System.out.println(Output);
             }
         }
+    }
+
+    private void getDeltaRelative(MuseDataPacket p) {
+        double[] deltaVals = new double[4];
+        deltaVals[0] = p.getEegChannelValue(Eeg.EEG1);
+        deltaVals[1] = p.getEegChannelValue(Eeg.EEG2);
+        deltaVals[2] = p.getEegChannelValue(Eeg.EEG3);
+        deltaVals[3] = p.getEegChannelValue(Eeg.EEG4);
+
+        double sum = 0;
+        for (int i = 0; i < 4; i++) {
+            sum += deltaVals[i];
+        }
+        sum = sum / 4;
+        deltaPacket.add(sum);
+        sendData();
+    }
+
+    private void getBetaRelative(MuseDataPacket p) {
+        double[] betaVals = new double[4];
+        betaVals[0] = p.getEegChannelValue(Eeg.EEG1);
+        betaVals[1] = p.getEegChannelValue(Eeg.EEG2);
+        betaVals[2] = p.getEegChannelValue(Eeg.EEG3);
+        betaVals[3] = p.getEegChannelValue(Eeg.EEG4);
+
+        double sum = 0;
+        for (int i = 0; i < 4; i++) {
+            sum += betaVals[i];
+        }
+        sum = sum / 4;
+        betaPacket.add(sum);
+        sendData();
     }
 
     private void getThetaRelative(MuseDataPacket p) {
@@ -525,7 +584,6 @@ public class MainActivity extends Activity implements OnClickListener {
         eegBuffer[4] = p.getEegChannelValue(Eeg.AUX_LEFT);
         eegBuffer[5] = p.getEegChannelValue(Eeg.AUX_RIGHT);
 
-        MuseDataPacket alpha = MuseDataPacketType.ALPHA_RELATIVE
 
 
         writeDataPacketToFile(p);
