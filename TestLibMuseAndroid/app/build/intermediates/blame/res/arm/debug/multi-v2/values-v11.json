@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/build/intermediates/incremental/mergeArmDebugResources/merged.dir/values-v11/values-v11.xml",
+            "outputFile": "/Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/build/intermediates/incremental/mergeArmDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/res/values-v11/styles.xml",
+                    "source": "/Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/res/values-v11/styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",

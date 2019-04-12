@@ -1,4 +1,0 @@
-#Fri Mar 08 15:53:26 PST 2019
-base.0=/Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
