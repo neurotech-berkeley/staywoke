@@ -1,4 +1,4 @@
-# StayWoke
+\\\\# StayWoke
 Repository for Neurotech @ Berkeley (NT@B) Software Team 2019
 
 ## About Stay Woke
@@ -16,7 +16,24 @@ Our Android application runs on Java with a Python framework for our signal proc
 
 ### The Algorithm
 
-### Challenges we Faced
+We read several papers and settled on one particular paper ?[Driver Drowsiness Detection Using EEG Features](https://link.springer.com/chapter/10.1007/978-3-319-92285-0_49#Fig3)  to use as inspiration for our algorithm. 
+
+Data from Muse was sent in 1 second chunks and analyzed with the following method. 
+
+We extracted the absolute power bands of Alpha, Beta, Delta and Theta waves, and calculated the Root Mean Square of Alpha, and the RMS of the differentiated alpha, and the BAI (Brain Activity Index) as specified in the paper. 
+
+BAI is calculated as follows:
+
+
+These were outlined as 3 different methods to test drowsiness, however we decided to implement all three methods at particular thresholds to detect drowsiness. 
+
+
+
+## Challenges we Faced
+Before arriving at our current algorithm for drowsiness detection, we tried to reproduce the processes outlined by several other papers. However, the data that these authors started with was often in a different format than the data extracted via the Muse headset so it was difficult to replicate their results. 
+We also struggled to collect a wide breadth of drowsiness data on our own and therefore had to base our drowsiness thresholds off of existing data from papers we cited.
+Additionally, the Muse headset may be more sensitive than traditional EEG headsets to artifacts.
 
 ## About Us
 
+We are a 14-member software team of the student-run organization Neurotechnology @ Berkeley. We have members from all over the world as well as a variety of majors ranging from Electrical Engineering and Computer Science to Bioengineering to Molecular and Cellular Biology.
