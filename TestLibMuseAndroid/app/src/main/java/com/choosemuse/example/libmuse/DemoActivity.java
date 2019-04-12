@@ -5,12 +5,29 @@
 
 package com.choosemuse.example.libmuse;
 
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.List;
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-import java.util.concurrent.atomic.AtomicReference;
-
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.AnnotationData;
 import com.choosemuse.libmuse.ConnectionState;
@@ -34,29 +51,10 @@ import com.choosemuse.libmuse.MuseVersion;
 import com.choosemuse.libmuse.Result;
 import com.choosemuse.libmuse.ResultLevel;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Looper;
-import android.os.Handler;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.bluetooth.BluetoothAdapter;
-
-
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.widget.Toast;
+import java.io.File;
+import java.lang.ref.WeakReference;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * This example will illustrate how to connect to a Muse headband,
@@ -80,6 +78,9 @@ import android.widget.Toast;
  * 8. To disconnect from the headband, press "Disconnect"
  */
 public class DemoActivity extends Activity implements OnClickListener {
+
+    Python python;
+    PyObject hello;
 
     /**
      * Tag used for logging purposes.
@@ -183,6 +184,8 @@ public class DemoActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        python = Python.getInstance();
 
         // We need to set the context on MuseManagerAndroid before we can do anything.
         // This must come before other LibMuse API calls as it also loads the library.

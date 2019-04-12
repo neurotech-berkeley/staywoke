@@ -1,129 +1,143 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:17:1-31:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:3:5-45
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:3:5-45
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:7:5-81
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.BLUETOOTH
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:8:5-68
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:8:22-65
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:8:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:9:5-74
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:9:5-74
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:9:22-71
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:9:22-71
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:10:5-81
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:10:22-78
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:12:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:19:5-79
+	android:name
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:19:22-76
 uses-sdk
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-15:41
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-15:41
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-15:41
-MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:21:5-23:58
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-15:41
-INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:13:5-15:41
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:5-24:41
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:5-24:41
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:5-24:41
+INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:5-24:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:15:9-38
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:24:9-38
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:14:9-35
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:23:9-35
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:17:5-32:19
-MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:29:5-20
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:26:5-44:19
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:30:9-41
 	android:icon
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:19:9-45
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:29:9-45
 	android:allowBackup
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:28:9-35
 	android:theme
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:21:9-40
-activity#com.choosemuse.example.libmuse.DemoActivity
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:22:9-31:20
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:31:9-40
+	android:name
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:27:9-63
+activity#com.choosemuse.example.libmuse.MainActivity
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:32:9-41:20
 	android:screenOrientation
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:24:13-49
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:34:13-49
 	android:label
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:25:13-45
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:35:13-45
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:23:13-71
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:33:13-71
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:26:13-30:29
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:36:13-40:29
 action#android.intent.action.MAIN
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:27:17-69
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:27:25-66
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:29:17-77
+ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from /Users/apottaba/libmuse_6.0.3/android/examples/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:29:27-74
+		ADDED from /Users/apottaba/Desktop/neurotech-software/TestLibMuseAndroid/app/src/main/AndroidManifest.xml:39:27-74
 meta-data#android.support.VERSION
-ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/71b28030c77ca0368a6f77d5068e2328/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/416a3da0fc3886755236faf555f2e830/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/b16f6e90f835b117bb7df31bf69d0185/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/f2262d2f14c2ac615e7238a6a9f4e235/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/c58bc0c4e62039880e70af7d76b190d6/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/7a8bb5121f1b065ffd27d812a5d5edbc/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/2a22539a687c32c1dded040ec8ac8a4f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/313441414cb783ff9b515c34680278a9/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/a8c5cab72072139a67a81aac789b260b/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/74ccecb7e80559cdacd78bac30190cd4/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/aa4817ce140072786f3a23e4981decdb/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:support-v4:25.3.1] /Users/apottaba/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/9b27d3dad6df6657ebfdbf809bd9cfbc/AndroidManifest.xml:26:9-47

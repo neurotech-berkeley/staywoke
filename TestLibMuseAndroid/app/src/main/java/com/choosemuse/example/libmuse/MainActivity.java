@@ -5,12 +5,29 @@
 
 package com.choosemuse.example.libmuse;
 
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.List;
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.concurrent.atomic.AtomicReference;
-
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.AnnotationData;
 import com.choosemuse.libmuse.ConnectionState;
@@ -34,28 +51,10 @@ import com.choosemuse.libmuse.MuseVersion;
 import com.choosemuse.libmuse.Result;
 import com.choosemuse.libmuse.ResultLevel;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Looper;
-import android.os.Handler;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.bluetooth.BluetoothAdapter;
-
-
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.widget.Toast;
+import java.io.File;
+import java.lang.ref.WeakReference;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * This example will illustrate how to connect to a Muse headband,
@@ -79,6 +78,9 @@ import android.widget.Toast;
  * 8. To disconnect from the headband, press "Disconnect"
  */
 public class MainActivity extends Activity implements OnClickListener {
+
+    Python python;
+    PyObject hello;
 
     /**
      * Tag used for logging purposes.
@@ -181,6 +183,9 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        python = Python.getInstance();
+        hello = python.getModule("hello");
 
         // We need to set the context on MuseManagerAndroid before we can do anything.
         // This must come before other LibMuse API calls as it also loads the library.
@@ -416,6 +421,10 @@ public class MainActivity extends Activity implements OnClickListener {
         // valuesSize returns the number of data values contained in the packet.
         final long n = p.valuesSize();
         switch (p.packetType()) {
+            case ALPHA_SCORE:
+                assert(eegBuffer.length >= n);
+                getAlphaScoreValues(p);
+
             case EEG:
                 assert(eegBuffer.length >= n);
                 getEegChannelValues(eegBuffer,p);
@@ -437,6 +446,24 @@ public class MainActivity extends Activity implements OnClickListener {
             default:
                 break;
         }
+    }
+
+    private void getAlphaScoreValues(MuseDataPacket p) {
+        eegBuffer[0] = p.getEegChannelValue(Eeg.EEG1);
+        eegBuffer[1] = p.getEegChannelValue(Eeg.EEG2);
+        eegBuffer[2] = p.getEegChannelValue(Eeg.EEG3);
+        eegBuffer[3] = p.getEegChannelValue(Eeg.EEG4);
+        eegBuffer[4] = p.getEegChannelValue(Eeg.AUX_LEFT);
+        eegBuffer[5] = p.getEegChannelValue(Eeg.AUX_RIGHT);
+
+        writeDataPacketToFile(p);
+        saveFile();
+        playMuseFile("new_muse_file.muse");
+
+        hello.callAttr("getEEGBuffer", eegBuffer);
+
+        Toast.makeText(getApplicationContext(),"" + hello.get("h").toInt(),Toast.LENGTH_SHORT).show();
+
     }
 
     /**
@@ -470,6 +497,15 @@ public class MainActivity extends Activity implements OnClickListener {
         buffer[3] = p.getEegChannelValue(Eeg.EEG4);
         buffer[4] = p.getEegChannelValue(Eeg.AUX_LEFT);
         buffer[5] = p.getEegChannelValue(Eeg.AUX_RIGHT);
+
+        writeDataPacketToFile(p);
+        saveFile();
+        playMuseFile("new_muse_file.muse");
+
+        hello.callAttr("getEEGBuffer", buffer);
+
+        Toast.makeText(getApplicationContext(),"" + hello.get("h").toInt(),Toast.LENGTH_SHORT).show();
+
     }
 
     private void getAccelValues(MuseDataPacket p) {
@@ -551,6 +587,8 @@ public class MainActivity extends Activity implements OnClickListener {
         fp1.setText(String.format("%6.2f", eegBuffer[1]));
         fp2.setText(String.format("%6.2f", eegBuffer[2]));
         tp10.setText(String.format("%6.2f", eegBuffer[3]));
+
+
     }
 
     private void updateAlpha() {
@@ -605,6 +643,7 @@ public class MainActivity extends Activity implements OnClickListener {
      * @param p     The data packet to write.
      */
     private void writeDataPacketToFile(final MuseDataPacket p) {
+        fileWriter.get().open();
         Handler h = fileHandler.get();
         if (h != null) {
             h.post(new Runnable() {
@@ -614,6 +653,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 }
             });
         }
+
     }
 
     /**

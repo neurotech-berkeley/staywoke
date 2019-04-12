@@ -8,11 +8,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "com.chaquo.python:gradle:6.0.0"
+
+        classpath 'com.google.gms:google-services:4.0.1'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
