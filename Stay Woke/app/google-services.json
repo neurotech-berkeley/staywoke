@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1037195983743",
+    "firebase_url": "https://snack-27c23.firebaseio.com",
+    "project_id": "snack-27c23",
+    "storage_bucket": "snack-27c23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037195983743:android:a5e6339d8cacbda3",
+        "android_client_info": {
+          "package_name": "com.saiyandapalli.vroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037195983743-ntdder7f1ep57rgr7kbs6lp98t140ank.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saiyandapalli.vroom",
+            "certificate_hash": "d443710b252934bb153751da276eea5e275b38b1"
+          }
+        },
+        {
+          "client_id": "1037195983743-vl9pllev9pdqenu3lg0q97oj94see0ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMYDudpJnYdvAsJ855kqpa8HBawuAW-v8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037195983743-vl9pllev9pdqenu3lg0q97oj94see0ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

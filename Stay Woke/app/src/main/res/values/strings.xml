@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Stay Woke</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="style_json">[   {     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#242f3e\"       },       {         \"saturation\": -5       },       {         \"lightness\": -10       }     ]   },   {     \"elementType\": \"labels.icon\",     \"stylers\": [       {         \"visibility\": \"off\"       }     ]   },   {     \"elementType\": \"labels.text.stroke\",     \"stylers\": [       {         \"color\": \"#29274c\"       }     ]   },   {     \"featureType\": \"administrative.locality\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#d59563\"       }     ]   },   {     \"featureType\": \"poi\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#d59563\"       }     ]   },   {     \"featureType\": \"poi.park\",     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#263c3f\"       }     ]   },   {     \"featureType\": \"poi.park\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#6b9a76\"       }     ]   },   {     \"featureType\": \"road\",     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#38414e\"       }     ]   },   {     \"featureType\": \"road\",     \"elementType\": \"geometry.stroke\",     \"stylers\": [       {         \"color\": \"#212a37\"       }     ]   },   {     \"featureType\": \"road\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#9ca5b3\"       }     ]   },   {     \"featureType\": \"road.highway\",     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#746855\"       }     ]   },   {     \"featureType\": \"road.highway\",     \"elementType\": \"geometry.stroke\",     \"stylers\": [       {         \"color\": \"#1f2835\"       }     ]   },   {     \"featureType\": \"road.highway\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#f3d19c\"       }     ]   },   {     \"featureType\": \"transit\",     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#2f3948\"       }     ]   },   {     \"featureType\": \"transit.station\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#d59563\"       }     ]   },   {     \"featureType\": \"water\",     \"elementType\": \"geometry\",     \"stylers\": [       {         \"color\": \"#17263c\"       }     ]   },   {     \"featureType\": \"water\",     \"elementType\": \"labels.text.fill\",     \"stylers\": [       {         \"color\": \"#515c6d\"       }     ]   },   {     \"featureType\": \"water\",     \"elementType\": \"labels.text.stroke\",     \"stylers\": [       {         \"color\": \"#17263c\"       }     ]   } ]</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="connect">Connect</string>
+    <string name="status">Connection Status:</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="refresh">Refresh</string>
+    <string name="init_val">0.0</string>
+    <string name="eeg">EEG data:</string>
+    <string name="accel">Accelerometer Data:</string>
+    <string name="version">Version:</string>
+    <string name="undefined">unknown</string>
+    <string name="artifacts">Blinks, Jaw: </string>
+    <string name="msg_count">Msg number, size: </string>
+    <string name="pause">Pause/Resume</string>
+    <string name="drop">Drop</string>
+    <string name="muse_elem">Alpha relative:</string>
+
+    <string name="permission_dialog_title">Muse Needs Your Permission</string>
+    <string name="permission_dialog_description">Muse needs a few permissions to work properly. On the next screens, tap "Allow" to proceed. If you deny, Muse will not work properly until you go into your Android settings and allow.</string>
+    <string name="permission_dialog_understand">I Understand</string>
+</resources>

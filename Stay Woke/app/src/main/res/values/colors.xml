@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--OUR COLORS!-->
+    <color name="color_black">#191716</color>
+    <color name="color_bg_dark_pink">#FFB7BE</color>
+    <color name="color_button_dark_purple">#29274C</color>
+    <color name="color_font_eggshell">#FFFCEA</color>
+    <color name="color_bg_light_pink">#A7CCED</color>
+    <color name="color_red">#FF0000</color>
+
+    <!--#ffdde2-->
+</resources>
