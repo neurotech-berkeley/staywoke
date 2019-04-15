@@ -1,4 +1,4 @@
-\\\\# StayWoke
+\\\\ StayWoke
 Repository for Neurotech @ Berkeley (NT@B) Software Team 2019
 
 ## About Stay Woke
